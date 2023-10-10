@@ -30,7 +30,7 @@
         {
             this.Titleoutput = new System.Windows.Forms.Label();
             this.instructionoutput = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.numberinput = new System.Windows.Forms.TextBox();
             this.outputlable = new System.Windows.Forms.Label();
             this.Guessbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -53,38 +53,40 @@
             this.instructionoutput.TabIndex = 1;
             this.instructionoutput.Text = "select a number between 1-100";
             // 
-            // textBox1
+            // numberinput
             // 
-            this.textBox1.Location = new System.Drawing.Point(69, 185);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 2;
+            this.numberinput.Location = new System.Drawing.Point(94, 166);
+            this.numberinput.Name = "numberinput";
+            this.numberinput.Size = new System.Drawing.Size(113, 22);
+            this.numberinput.TabIndex = 2;
+            this.numberinput.TextChanged += new System.EventHandler(this.numberinput_TextChanged);
             // 
             // outputlable
             // 
             this.outputlable.BackColor = System.Drawing.Color.Gray;
-            this.outputlable.Location = new System.Drawing.Point(66, 234);
+            this.outputlable.Location = new System.Drawing.Point(81, 302);
             this.outputlable.Name = "outputlable";
-            this.outputlable.Size = new System.Drawing.Size(100, 23);
+            this.outputlable.Size = new System.Drawing.Size(144, 33);
             this.outputlable.TabIndex = 3;
             // 
             // Guessbutton
             // 
-            this.Guessbutton.Location = new System.Drawing.Point(74, 295);
+            this.Guessbutton.Location = new System.Drawing.Point(94, 225);
             this.Guessbutton.Name = "Guessbutton";
-            this.Guessbutton.Size = new System.Drawing.Size(75, 23);
+            this.Guessbutton.Size = new System.Drawing.Size(113, 48);
             this.Guessbutton.TabIndex = 4;
             this.Guessbutton.Text = "Guess";
             this.Guessbutton.UseVisualStyleBackColor = true;
+            this.Guessbutton.Click += new System.EventHandler(this.Guessbutton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(386, 450);
             this.Controls.Add(this.Guessbutton);
             this.Controls.Add(this.outputlable);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.numberinput);
             this.Controls.Add(this.instructionoutput);
             this.Controls.Add(this.Titleoutput);
             this.Name = "Form1";
@@ -98,7 +100,7 @@
 
         private System.Windows.Forms.Label Titleoutput;
         private System.Windows.Forms.Label instructionoutput;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox numberinput;
         private System.Windows.Forms.Label outputlable;
         private System.Windows.Forms.Button Guessbutton;
     }
